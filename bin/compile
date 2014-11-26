@@ -6,6 +6,9 @@
 
 echo "-----> Running compile with build-dir: $1 and cache-dir: $2"
 
+BUILD_DIR=$1
+CACHE_DIR=$2
+
 # Set LD_LIBRARAY_PATH and link essential libraries
 echo "-----> pwd"
 echo `pwd`
@@ -21,6 +24,7 @@ ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
 export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
 
 echo "-----> LD_LIBRARAY_PATH set"
+cd $BUILD_DIR
 echo `./hello`
 
 sleep 3
