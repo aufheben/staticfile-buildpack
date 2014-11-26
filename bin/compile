@@ -7,6 +7,13 @@
 echo "-----> Running compile with build-dir: $1 and cache-dir: $2"
 
 # Set LD_LIBRARAY_PATH and link essential libraries
+echo "-----> pwd"
+echo `pwd`
+echo "-----> ls build-dir"
+echo `ls $1`
+echo "-----> ls cache-dir"
+echo `ls $2`
+echo "-----> ls /usr/lib/libgmp*"
 echo `ls /usr/lib/libgmp*`
 FIXED_HOME=/app
 mkdir -p $FIXED_HOME/usr/lib
