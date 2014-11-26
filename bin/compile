@@ -18,13 +18,16 @@ echo "-----> ls cache-dir"
 echo `ls $2`
 echo "-----> ls /usr/lib/libgmp*"
 echo `ls /usr/lib/libgmp*`
-FIXED_HOME=/app
-mkdir -p $FIXED_HOME/usr/lib
-ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
-export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
 
-echo "-----> LD_LIBRARAY_PATH set"
+# FIXED_HOME=/app
+# mkdir -p $FIXED_HOME/usr/lib
+# ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
+# export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
+
 cd $BUILD_DIR
+tar xf libgmp.tar
+export LD_LIBRARY_PATH=libgmp
+echo "-----> LD_LIBRARAY_PATH set"
 echo `./hello`
 
 sleep 3
