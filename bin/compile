@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-set -e            # fail fast
-set -o pipefail   # don't ignore exit codes when piping output
+# set -e            # fail fast
+# set -o pipefail   # don't ignore exit codes when piping output
 
 echo "-----> Running compile with build-dir: $1 and cache-dir: $2"
 
@@ -14,6 +14,7 @@ ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
 export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
 
 echo "-----> LD_LIBRARAY_PATH set"
+echo `./hello`
 
 sleep 3
 exit 0
