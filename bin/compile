@@ -4,7 +4,16 @@
 set -e            # fail fast
 set -o pipefail   # don't ignore exit codes when piping output
 
-echo "-----> running compile for build-dir: $1 and cache-dir: $2"
+echo "-----> Running compile with build-dir: $1 and cache-dir: $2"
+
+# Set LD_LIBRARAY_PATH and link essential libraries
 echo `ls /usr/lib/libgmp*`
+FIXED_HOME=/app
+mkdir -p $FIXED_HOME/usr/lib
+ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
+export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
+
+echo "-----> LD_LIBRARAY_PATH set"
+
 sleep 3
 exit 0

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-echo "-----> running detect for build-dir: $1"
+echo "-----> Running detect with build-dir: $1"
 sleep 3
 exit 0
