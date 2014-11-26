@@ -21,7 +21,7 @@ echo `ls /usr/lib/libgmp*`
 cd $BUILD_DIR
 tar xf lib.tar
 echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
-echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./heroku-haskell`
+# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./heroku-haskell`
 
 sleep 3
 exit 0
