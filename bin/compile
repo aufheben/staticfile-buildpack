@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-# set -e            # fail fast
-# set -o pipefail   # don't ignore exit codes when piping output
+set -e            # fail fast
+set -o pipefail   # don't ignore exit codes when piping output
 
 echo "-----> Running compile with build-dir: $1 and cache-dir: $2"
 
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-# Set LD_LIBRARAY_PATH and link essential libraries
 echo "-----> pwd"
 echo `pwd`
 echo "-----> ls build-dir"
@@ -18,11 +17,6 @@ echo "-----> ls cache-dir"
 echo `ls $2`
 echo "-----> ls /usr/lib/libgmp*"
 echo `ls /usr/lib/libgmp*`
-
-# FIXED_HOME=/app
-# mkdir -p $FIXED_HOME/usr/lib
-# ln -s /usr/lib/libgmp.so.3.5.2 $FIXED_HOME/usr/lib/libgmp.so
-# export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
 
 cd $BUILD_DIR
 tar xf lib.tar
