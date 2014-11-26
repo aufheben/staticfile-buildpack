@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
-echo -e "---\ndefault_process_types:\n  web: lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./haskell-wai"
+echo "--- {}"
