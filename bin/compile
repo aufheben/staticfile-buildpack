@@ -25,10 +25,8 @@ echo `ls /usr/lib/libgmp*`
 # export LD_LIBRARY_PATH=$FIXED_HOME/usr/lib
 
 cd $BUILD_DIR
-tar xf libgmp.tar
-export LD_LIBRARY_PATH=libgmp
-echo "-----> LD_LIBRARAY_PATH set"
-echo `./hello`
+tar xf lib.tar
+echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
 
 sleep 3
 exit 0
