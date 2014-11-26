@@ -6,4 +6,5 @@ set -o pipefail   # don't ignore exit codes when piping output
 
 echo "-----> running compile for build-dir: $1 and cache-dir: $2"
 echo `ls /usr/lib/libgmp*`
+sleep 3
 exit 0
