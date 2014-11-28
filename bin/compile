@@ -20,8 +20,7 @@ echo `ls /usr/lib/libgmp*`
 
 cd $BUILD_DIR
 tar xf lib.tar
-echo `./hello`
-# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
+echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
 # echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./haskell-wai`
 # echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./haskell-wai Production --port $VCAP_APP_PORT`
 
