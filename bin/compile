@@ -17,13 +17,13 @@ echo "-----> ls cache-dir"
 echo `ls $2`
 echo "-----> ls /usr/lib/libgmp*"
 echo `ls /usr/lib/libgmp*`
-echo "-----> ls /lib"
-echo `ls /lib`
 
 cd $BUILD_DIR
 tar xf lib.tar
-echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
-# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./heroku-haskell`
+echo `./hello`
+# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./hello`
+# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./haskell-wai`
+# echo `lib/x86_64-linux-gnu/ld-2.15.so --library-path lib/x86_64-linux-gnu ./haskell-wai Production --port $VCAP_APP_PORT`
 
 sleep 3
 exit 0
